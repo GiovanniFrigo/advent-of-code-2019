@@ -40,6 +40,6 @@ Just like the past years, I will keep a journal of the most challenging/interest
 
 ## Completed challenges
 
-| Day | Stars | Notes |
-|-----|-------|-------|
-| [Day  1](./code/day1.hs) | ⭐️🌟 | |
+| Day | Problem | Solution | Stars | Notes |
+|-----|---------|----------|-------|-------|
+| Day  1 | [The Tyranny of the Rocket Equation](https://adventofcode.com/2019/day/1) | [day1.hs](./code/day1/day1.hs) | ⭐️🌟 | |
