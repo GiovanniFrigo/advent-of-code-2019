@@ -1,0 +1,9 @@
+# esclude extensionless files (compiled executables in haskell)
+*
+!*.*
+!*/
+# exclude haskell intermediate build files
+*.hi
+*.o
+# macOS 
+.DS_Store
