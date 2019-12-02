@@ -16,6 +16,17 @@ readSignedInt value = toInt value
 linesAsInt :: String -> [Int]
 linesAsInt contents = map toInt $ lines contents
 
+-- a modified version of `words`, to split at commas
+commaSeparatedWords   :: String -> [String]
+commaSeparatedWords s =  case dropWhile (==',') s of
+                          "" -> []
+                          s' -> w : commaSeparatedWords s''
+                                where (w, s'') = break (==',') s'
+
+-- reads a string and splits it at each comma, then parses to int
+stringToIntList :: String -> [Int]
+stringToIntList list = map toInt $ commaSeparatedWords list
+
 -- combine the elements of a list
 combineElements :: [a] -> [(a, a)]
 combineElements list = [(x, y) | x <- list, y <- list]
