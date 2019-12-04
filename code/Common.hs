@@ -25,7 +25,7 @@ digits = map digitToInt . show
 
 
 -- a modified version of `words`, to split at a given char
-splitOn :: Char -> String ->  [String]
+splitOn :: Char -> String -> [String]
 splitOn c s =  case dropWhile (==c) s of
 	              "" -> []
 	              s' -> w : splitOn c s''
@@ -33,7 +33,7 @@ splitOn c s =  case dropWhile (==c) s of
 
 -- reads a string and splits it at each comma, then parses to int
 stringToIntList :: String -> [Int]
-stringToIntList list = map toInt $ commaSeparatedWords list
+stringToIntList str = map toInt $ splitOn ',' str
 
 -- combine the elements of a list
 combineElements :: [a] -> [(a, a)]
