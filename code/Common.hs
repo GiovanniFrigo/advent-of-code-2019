@@ -1,5 +1,7 @@
 module Common where
 
+import Data.Char
+
 -- an infix ternary operator: `cond ? truthy $ falsey`
 (?) :: Bool -> a -> a -> a
 True  ? x = const x
@@ -16,12 +18,18 @@ readSignedInt value = toInt value
 linesAsInt :: String -> [Int]
 linesAsInt contents = map toInt $ lines contents
 
--- a modified version of `words`, to split at commas
-commaSeparatedWords   :: String -> [String]
-commaSeparatedWords s =  case dropWhile (==',') s of
-                          "" -> []
-                          s' -> w : commaSeparatedWords s''
-                                where (w, s'') = break (==',') s'
+
+-- splits an integer into its digits
+digits :: Int -> [Int]
+digits = map digitToInt . show
+
+
+-- a modified version of `words`, to split at a given char
+splitOn :: Char -> String ->  [String]
+splitOn c s =  case dropWhile (==c) s of
+	              "" -> []
+	              s' -> w : splitOn c s''
+	                    where (w, s'') = break (==c) s'
 
 -- reads a string and splits it at each comma, then parses to int
 stringToIntList :: String -> [Int]

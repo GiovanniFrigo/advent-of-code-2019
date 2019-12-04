@@ -41,5 +41,6 @@ Just like the past years, I will keep a journal of the most challenging/interest
 
 | Day | Problem | Solution | Stars | Notes |
 |-----|---------|----------|-------|-------|
-| Day  1 | [The Tyranny of the Rocket Equation](https://adventofcode.com/2019/day/1) | [day1.hs](./code/day1/day1.hs) | ⭐️🌟 | |
-| Day  2 | [1202 Program Alarm](https://adventofcode.com/2019/day/2) | [day2.hs](./code/day2/day2.hs) | ⭐️🌟 | |
+| Day 1 | [The Tyranny of the Rocket Equation](https://adventofcode.com/2019/day/1) | [day1.hs](./code/day1/day1.hs) | ⭐️🌟 | |
+| Day 2 | [1202 Program Alarm](https://adventofcode.com/2019/day/2) | [day2.hs](./code/day2/day2.hs) | ⭐️🌟 | |
+| Day 4 | [Secure Container](https://adventofcode.com/2019/day/4) | [day4.hs](./code/day4/day4.hs) | ⭐️🌟 | |
