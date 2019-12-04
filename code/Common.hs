@@ -43,6 +43,11 @@ combineElements list = [(x, y) | x <- list, y <- list]
 indexedList :: [a] -> [(Int, a)]
 indexedList list = zip [0..] list
 
+-- contiguous pairs in a list
+contiguousPairs :: [a] -> [(a, a)]
+contiguousPairs (a:b:xs) = (a,b):(contiguousPairs (b:xs))
+contiguousPairs _ = []
+
 -- solution template
 part1 = do
     contents <- readFile "input.txt"
